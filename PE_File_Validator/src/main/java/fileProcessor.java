@@ -49,6 +49,10 @@ public class fileProcessor extends HttpServlet {
        
         
     }
+    
+    private int check_GP(){
+        return 0;
+    }
 
 
 }
