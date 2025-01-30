@@ -10,6 +10,8 @@
         </form>
         
         <form class="File_Panel" method="post" action="fileProcessor" enctype="multipart/form-data">
+            <label for="delimiter" >How are the files values separated:</label>
+            <input type="text" name="delimiter" value=",">
             <input type="file" name="choosenFile" multiple="">
             <button type="submit">Submit</button>
         </form>
