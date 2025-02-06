@@ -18,6 +18,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -39,7 +41,12 @@ public class fileProcessor extends HttpServlet {
         try {
             processFile(request, response);
         } catch (IOException ex) {
-            System.out.println("Error with getting the response");
+            try {
+                response.getWriter().print("Error with getting the response");
+                System.out.println("Error with getting the response");
+            } catch (IOException ex1) {
+                System.out.println("Error with getting response");
+            }
         }
     }
 
